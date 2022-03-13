@@ -1,0 +1,227 @@
+html {
+    font-size: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+::placeholder {
+    color:#E5E5E5;
+}
+body {
+    margin: 0;
+    background-color: #14213D;
+    overflow-x: hidden; /*Disables scrolling on X axis (left to right_*/
+    font-family: 'Cardo', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+   }
+#header {
+    background-color: #FCA311;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.5rem;
+
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+    #header {
+        gap: 1rem;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+}
+.header-image {
+    display: block;
+}
+.logo {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    .logo {
+        width: 100%;
+        margin-top: 10px;
+        transform: scale(1.5);
+    }
+}
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+    #nav-bar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.55rem;
+    }
+}
+
+#nav-bar > a {
+    background-color: #14213D;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    min-width: 175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+a:hover {
+    /*Maybe add something*/
+}
+#container {
+    position: relative;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+@media (max-width: 600px) {
+    #container {
+        position: static;
+    }
+}
+#features {
+    background-color: #E5E5E5;
+    width: 60vw;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+
+}
+#how-it-works {
+    margin: 2em;
+}
+
+#how-it-works > iframe {
+    border: none;
+}
+@media (max-width: 600px) {
+    #how-it-works > iframe {
+        width: 100vw;
+        padding: 1rem;
+    }
+}
+main {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    main {
+        width: 100vw;
+    }
+}
+#buy-now {
+    background-color: #FCA311;
+    margin: 1rem;
+}
+#buy-now > header{
+    text-align: center;
+    font-size: 1.5rem;
+}
+#options {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.product {
+    background-color: #E5E5E5;
+    margin: 1rem 0;
+    min-height: 20rem;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 10px 30px black;
+    transition: box-shadow 0.3s ease-out;
+}
+.product:hover {
+    /*Make a transition*/
+    box-shadow: 0px 10px 30px #E5E5E5 ;
+}
+.product-name {
+    background-color: #14213D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px black;
+    margin: 0;
+    color: #fff;
+}
+.product ul {
+    line-height: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+#form input[type="email"] {
+    background-color: #14213D;
+    border: none;
+    color: #E5E5E5;
+    padding: 1em;
+    max-width: 200px;
+}
+input[type="email"]:focus {
+    outline: 0;
+}
+#form input[type="submit"] {
+    background-color: #14213D;
+    color: #E5E5E5;
+    border: none;
+    padding: 15px 25px;
+    margin: 20px;
+    cursor: pointer;
+    /*background: linear-gradient(to left, #14213D 50%, #FCA311 50%);
+    background-position: right;
+    background-size: 200%;
+    transition: background-position .5s ease-out;*/
+
+}
+#form input[type="submit"]:hover {
+    /*transition stuff
+    background-position: left;
+    outline: 1px solid #E5E5E5;*/
+}
+#footer {
+    background-color: rgba(229, 229, 229, 0.2);
+    color: #fff;
+    width: 100%;
+    height: auto;
+    min-height: 45px;
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+    text-align: right;
+}
+@media (max-width: 600px) {
+    p {
+        font-size: 1.25rem;
+    }
+}

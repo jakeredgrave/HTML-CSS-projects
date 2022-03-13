@@ -1,0 +1,225 @@
+html {
+    font-family: 100%;
+}
+* {
+    box-sizing: border-box;
+    
+}
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    /*https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c*/
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: #06D6A0;
+    display: flex;
+    flex-direction: row;
+    color: #073B4C;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#navbar a {
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2rem;
+    height: 100%;
+}
+@media (max-width: 770px) {
+    #navbar {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #navbar ul {
+        flex-direction: column;
+    }
+}
+#navbar a:visited {
+    color: #073B4C;
+}
+#navbar a:hover {
+    background-color: #118AB2;
+}
+#navbar h1 {
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 2em;
+    background-image: url(imgs/img1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    /*Add Parallax*/
+}
+
+#projects {
+    background-color: #EF476F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.project-box {
+    padding: 2rem;
+    margin: 2rem;
+    text-align: center;
+    box-shadow: 5px 5px 10px;
+    background-color: #FFD166;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 5vw);
+    grid-gap: 15px;
+    
+    /*grid-template-areas: 
+    "miami miami hale hale hale"
+    "miami miami art-bar art-bar derek"
+    "jotaro jotaro jotaro joseph derek"
+    "dragon dragon vampire teemo derek"
+    ;*/
+}
+@media (max-width: 770px) { /*If I won't figure out how to make grid responsive*/
+    .project-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+} 
+.project-box a {
+    text-decoration: none;
+}
+#my-art-bar {
+    font-size: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #118AB2;
+    grid-column-start: 8;
+    grid-column-end: 13;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    /*grid-area: art-bar;*/
+}
+@media (max-width: 770px) {
+    #my-art-bar {
+        font-size: 1em;
+    }
+}
+.project-img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-tile--1 {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 9;
+    /*grid-area: miami;*/
+}
+.project-tile--2 {
+    grid-column-start: 8;
+    grid-column-end: 17;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    /*grid-area: hale;*/
+}
+.project-tile--3 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 13;
+    /*grid-area: joseph;*/
+}
+.project-tile--4 {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 13;
+    /*grid-area: jotaro;*/
+}
+.project-tile--5 {
+    grid-column-start: 13;
+    grid-column-end: 17;
+    grid-row-start: 7;
+    grid-row-end: 17;
+    /*grid-area: derek;*/
+}
+.project-tile--6 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 13;
+    grid-row-end: 17;
+    /*grid-area: dragon;*/
+}
+.project-tile--7 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 13;
+    grid-row-end: 17;
+    /*grid-area: teemo;*/
+}
+.project-tile--8 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 13;
+    grid-row-end: 17;
+    /*grid-area: vampire;*/
+}
+#contact {
+    font-size: 2em;
+    padding-top: 0;
+    background-image: url(imgs/img2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+#contact-links-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #06D6A0;
+    width: auto;
+    padding: 1rem;
+}
+.welcome-contact-style {
+    background-color: rgba(0, 0, 0 , 0.3);
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#footer {
+    margin: 0;
+    padding: 5px 0px 5px 20px;
+}
